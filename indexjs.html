@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    function validateForm() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var address = document.getElementById("address").value;
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirm_password").value;
+
+        // Perform basic validation
+        if (name.length >= 10 && validateEmail(email) && validatePhone(phone) && address.length >= 2 && validatePassword(password) && password === confirmPassword) {
+            alert("User registration successful!\n\n" + "Name: " + name + "\nEmail: " + email + "\nPhone: " + phone + "\nAddress: " + address);
+        } else {
+            alert("Invalid input. Please check your details and try again.");
+        }
+    }
+
+    function validateEmail(email) {
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    function validatePhone(phone) {
+        var phoneRegex = /^[0-9]{10}$/;
+        return phoneRegex.test(phone);
+    }
+
+    function validatePassword(password) {
+        var passwordRegex = /^(?=.*[A-Z].*[A-Z])(?=.*[0-9])(?=.*[_@$]).{2,}$/;
+        return passwordRegex.test(password);
+    }
+</script>
+
+<form>
+    <label for="name">Name (at least 10 characters):</label>
+    <input type="text" id="name" required minlength="10">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" pattern="[0-9]{10}" required>
+
+    <label for="address">Address (at least 2 characters):</label>
+    <input type="text" id="address" required minlength="2">
+
+    <label for="password">Password (at least 2 uppercase, 1 digit, 1 _@$):</label>
+    <input type="password" id="password" required pattern="^(?=.*[A-Z].*[A-Z])(?=.*[0-9])(?=.*[_@$]).{2,}$">
+
+    <label for="confirm_password">Confirm Password:</label>
+    <input type="password" id="confirm_password" required>
+
+    <button type="button" onclick="validateForm()">Register</button>
+</form>
+<p>Already have an account? <a href="loginjs.html">Login here</a>.</p>
+
+</body>
+</html>
