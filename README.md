@@ -1,14 +1,19 @@
 # webtech
+
+##### different type forms
 #### https://demo.mobiscroll.com/javascript/forms/#
+##### php form example
 #### https://www.w3schools.com/php/php_form_complete.asp
 
 #### https://www.codewithharry.com/tutorial/php-mysql-connecting/
 
+##### Create a Registration and Login System with PHP and MySQL
+#### https://speedysense.com/create-registration-login-system-php-mysql/
 
 #### this is for making  a database
 #### https://hevodata.com/learn/xampp-mysql/#41
 
-#### this is for login ,signup ,database
+#### this is for login ,signup ,database and help with php and javascript
 ####  https://www.javatpoint.com/php-mysql-login-system
 
 ##### assosiative array in index.php 
