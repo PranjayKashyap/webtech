@@ -1,5 +1,8 @@
 # webtech
 
+##### http://Github.com/Devanshtyagi0302
+##### https://github.com/Rijushree123/Youtube-V/tree/main/phptut
+##### https://github.com/AryanShuklaa
 ##### different type forms
 #### https://demo.mobiscroll.com/javascript/forms/#
 ##### php form example
